@@ -1,12 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import Sidebar from './sidebar';
-import { BrowserRouter, createBrowserRouter } from 'react-router-dom';
-
-const renderWithRouter = (component: JSX.Element) =>
-  render(component, {
-    wrapper: ({ children }) => <BrowserRouter>{children}</BrowserRouter>,
-  });
+import { renderWithRouter } from '../../testing-library/render';
 
 describe('sidebar', () => {
   it('should render', () => {
