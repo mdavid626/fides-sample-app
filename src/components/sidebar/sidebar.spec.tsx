@@ -5,7 +5,7 @@ import { BrowserRouter, createBrowserRouter } from 'react-router-dom';
 
 const renderWithRouter = (component: JSX.Element) =>
   render(component, {
-    wrapper: ({ children }) => <BrowserRouter>{children}</BrowserRouter>
+    wrapper: ({ children }) => <BrowserRouter>{children}</BrowserRouter>,
   });
 
 describe('sidebar', () => {
