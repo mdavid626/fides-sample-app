@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sidebar should render 1`] = `
+<DocumentFragment>
+  <div>
+    <a
+      href="/"
+    >
+      Movies
+    </a>
+    <a
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
