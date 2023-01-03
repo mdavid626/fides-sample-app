@@ -1,11 +1,11 @@
 .AboutPage {
-  margin: 0 auto;
-  padding: 32px;
-  max-width: 965px;
+  margin: var(--page-margin);
+  padding: var(--page-padding);
+  max-width: var(--page-width);
+  background-color: var(--page-background);
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: #fff;
 }
 
 .AboutPage-content {
