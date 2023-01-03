@@ -1,0 +1,16 @@
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Sidebar-header {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Sidebar-navigation {
+  display: flex;
+  gap: 8px;
+}

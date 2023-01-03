@@ -1,9 +1,9 @@
+import React from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import MoviesPage from '../pages/movies-page/movies-page';
 import AboutPage from '../pages/about-page/about-page';
-import React from 'react';
 
-const AppRouter = () => (
+const AppRouter: React.FC = () => (
   <BrowserRouter basename="/fides-sample-app">
     <Routes>
       <Route path="/" element={<MoviesPage />} />

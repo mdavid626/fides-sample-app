@@ -1,0 +1,17 @@
+.MovieItem {
+  display: flex;
+  gap: 16px;
+}
+
+.MovieItem-titleAndOverview {
+  flex: 1;
+}
+
+.MovieItem-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.MovieItem-overview {
+  color: #686868;
+}

@@ -1,6 +1,6 @@
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import React from 'react';
 
 export const renderWithRouter = (component: JSX.Element) => {
   const router = {} as { current?: ReturnType<typeof createBrowserRouter> };

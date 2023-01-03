@@ -1,0 +1,15 @@
+.AboutPage {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 965px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+}
+
+.AboutPage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
