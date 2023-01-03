@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import MoviesPage from '../pages/movies-page/movies-page';
 import AboutPage from '../pages/about-page/about-page';
 
 const AppRouter: React.FC = () => (
-  <BrowserRouter basename="/fides-sample-app">
+  <HashRouter>
     <Routes>
       <Route path="/" element={<MoviesPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default AppRouter;
