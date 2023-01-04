@@ -19,6 +19,11 @@ exports[`header should render 1`] = `
         Movies
       </a>
       <a
+        href="/favourites"
+      >
+        Favourites
+      </a>
+      <a
         href="/about"
       >
         About

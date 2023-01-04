@@ -1,6 +1,6 @@
-import { useQuery } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 import moviesService from '../../services/movies-service';
-import { MoviesResponse } from '../../../types/movies-response';
+import { Movie, MoviesResponse } from '../../../types/movies-response';
 
 export const useMovies = (
   currentPage: number
@@ -10,4 +10,51 @@ export const useMovies = (
     () => moviesService.getMovies(currentPage)
   );
   return [data, isFetching, error];
+};
+
+export const useFavourites = (): [
+  Movie[] | undefined,
+  boolean,
+  Error | null
+] => {
+  const { isFetching, error, data } = useQuery<Movie[], Error>(
+    'favourites',
+    () => moviesService.getFavourites()
+  );
+  return [data, isFetching, error];
+};
+
+export const useAddToFavourites = (): [(movie: Movie) => void, boolean] => {
+  const queryClient = useQueryClient();
+  const { mutate, isLoading } = useMutation<Movie[], Error, Movie>(
+    (movie) => moviesService.addToFavourites(movie),
+    {
+      onError: (error) => {
+        window.alert(error.message);
+      },
+      onSuccess: (movies) => {
+        queryClient.setQueryData('favourites', movies);
+      },
+    }
+  );
+  return [mutate, isLoading];
+};
+
+export const useRemoveFromFavourites = (): [
+  (movie: Movie) => void,
+  boolean
+] => {
+  const queryClient = useQueryClient();
+  const { mutate, isLoading } = useMutation<Movie[], Error, Movie>(
+    (movie) => moviesService.removeFromFavourites(movie),
+    {
+      onError: (error) => {
+        window.alert(error.message);
+      },
+      onSuccess: (movies) => {
+        queryClient.setQueryData('favourites', movies);
+      },
+    }
+  );
+  return [mutate, isLoading];
 };

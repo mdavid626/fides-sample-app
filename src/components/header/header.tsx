@@ -8,6 +8,7 @@ const Header: React.FC = () => (
     <div className="Header-title">Fides Sample App</div>
     <div className="Header-navigation">
       <Link to="/">Movies</Link>
+      <Link to="/favourites">Favourites</Link>
       <Link to="/about">About</Link>
     </div>
   </div>
