@@ -8,7 +8,9 @@ const AboutPage: React.FC = () => (
     <Header />
     <div className="AboutPage-content">
       <div>Simple React app created for Fides as an interview task.</div>
-      <div>Created by: Dávid Molnár</div>
+      <div>
+        Created by: <a href="https://mdavid626.com">Dávid Molnár</a>
+      </div>
       <a href="https://github.com/mdavid626/fides-sample-app">Source Code</a>
     </div>
   </div>

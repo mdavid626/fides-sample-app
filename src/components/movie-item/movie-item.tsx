@@ -6,7 +6,7 @@ import './movie-item.css';
 
 const MovieItem: React.FC<{ movie: Movie }> = ({ movie }) => (
   <div className="MovieItem">
-    <img src={movie.poster_path} width={200} />
+    <img src={movie.poster_path} className="MovieItem-poster" />
     <div className="MovieItem-titleAndOverview">
       <div className="MovieItem-title">{movie.title}</div>
       <div className="MovieItem-overview">{movie.overview}</div>
