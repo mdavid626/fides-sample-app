@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import moviesService from '../../services/movies-service';
 import { MoviesResponse } from '../../../types/movies-response';
 
 export const useMovies = (): [
@@ -8,10 +9,7 @@ export const useMovies = (): [
 ] => {
   const { isFetching, error, data } = useQuery<MoviesResponse, Error>(
     'movies',
-    () =>
-      fetch(
-        'https://mdavid626.github.io/fides-sample-app/api/movies/page/1'
-      ).then((response) => response.json())
+    () => moviesService.getMovies(1)
   );
   return [data, isFetching, error];
 };
