@@ -36,14 +36,22 @@ const MovieItem: React.FC<{ movie: Movie; isFavourite?: boolean }> = ({
             src={StarFilledIcon}
             className="MovieItem-favourite"
             title="Remove from favourites"
-            onClick={() => removeFromFavourites(movie)}
+            onClick={
+              isRemoveFromFavouritesLoading
+                ? undefined
+                : () => removeFromFavourites(movie)
+            }
           />
         ) : (
           <img
             src={StarIcon}
             className="MovieItem-favourite"
             title="Add to favourites"
-            onClick={() => addToFavourites(movie)}
+            onClick={
+              isAddToFavouritesLoading
+                ? undefined
+                : () => addToFavourites(movie)
+            }
           />
         )}
       </div>
