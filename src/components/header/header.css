@@ -23,6 +23,11 @@
   padding: 8px 16px;
 }
 
-.Header-navigation a {
+.Header-link {
   color: #fff;
+  font-weight: bold;
+}
+
+.Header-selectedLink {
+  color: #f5c518;
 }

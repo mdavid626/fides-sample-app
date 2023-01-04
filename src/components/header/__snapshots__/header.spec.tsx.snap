@@ -14,16 +14,19 @@ exports[`header should render 1`] = `
       class="Header-navigation"
     >
       <a
+        class="Header-link Header-selectedLink"
         href="/"
       >
         Movies
       </a>
       <a
+        class="Header-link"
         href="/favourites"
       >
         Favourites
       </a>
       <a
+        class="Header-link"
         href="/about"
       >
         About
