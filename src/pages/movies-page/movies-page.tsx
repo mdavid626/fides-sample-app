@@ -3,6 +3,7 @@ import Header from '../../components/header/header';
 import PageLoader from '../../components/page-loader/page-loader';
 import MovieItem from '../../components/movie-item/movie-item';
 import Pagination from '../../components/pagination/pagination';
+import Footer from '../../components/footer/footer';
 import {
   useFavourites,
   useMovies,
@@ -45,6 +46,7 @@ const MoviesPage: React.FC = () => {
           </div>
         ) : null}
       </PageLoader>
+      <Footer />
     </div>
   );
 };

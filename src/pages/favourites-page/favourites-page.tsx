@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/header/header';
 import PageLoader from '../../components/page-loader/page-loader';
 import MovieItem from '../../components/movie-item/movie-item';
+import Footer from '../../components/footer/footer';
 import { useFavourites } from '../../hooks/movies-hooks/movies-hooks';
 
 import './favourites-page.css';
-import { Link } from 'react-router-dom';
 
 const FavouritesPage: React.FC = () => {
   const [favourites, isFavouritesFetching, favouritesError] = useFavourites();
@@ -37,6 +38,7 @@ const FavouritesPage: React.FC = () => {
           </>
         ) : null}
       </PageLoader>
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
 import './about-page.css';
 
@@ -15,6 +16,7 @@ const AboutPage: React.FC = () => (
       </div>
       <a href="https://github.com/mdavid626/fides-sample-app">Source Code</a>
     </div>
+    <Footer />
   </div>
 );
 
