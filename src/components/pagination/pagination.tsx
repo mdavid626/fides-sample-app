@@ -13,7 +13,11 @@ const Pagination: React.FC<{
   return (
     <div className={classnames('Pagination', className)}>
       {currentPage > 1 && (
-        <div onClick={goPrevious} className="Pagination-arrow">
+        <div
+          onClick={goPrevious}
+          className="Pagination-arrow"
+          title="Go to previous page"
+        >
           «
         </div>
       )}
@@ -21,7 +25,11 @@ const Pagination: React.FC<{
         {currentPage}/{numberOfPages}
       </div>
       {currentPage < numberOfPages && (
-        <div onClick={goNext} className="Pagination-arrow">
+        <div
+          onClick={goNext}
+          className="Pagination-arrow"
+          title="Go to next page"
+        >
           »
         </div>
       )}
