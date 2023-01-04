@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/fides-sample-app/static/css/main.46f12565.css",
-    "main.js": "/fides-sample-app/static/js/main.00b090b1.js",
+    "main.css": "/fides-sample-app/static/css/main.19efabeb.css",
+    "main.js": "/fides-sample-app/static/js/main.a90cdcfa.js",
+    "static/media/spinner.svg": "/fides-sample-app/static/media/spinner.328d338fb359dbbc3c4b0c924c7b06f2.svg",
     "index.html": "/fides-sample-app/index.html",
-    "main.46f12565.css.map": "/fides-sample-app/static/css/main.46f12565.css.map",
-    "main.00b090b1.js.map": "/fides-sample-app/static/js/main.00b090b1.js.map"
+    "main.19efabeb.css.map": "/fides-sample-app/static/css/main.19efabeb.css.map",
+    "main.a90cdcfa.js.map": "/fides-sample-app/static/js/main.a90cdcfa.js.map"
   },
   "entrypoints": [
-    "static/css/main.46f12565.css",
-    "static/js/main.00b090b1.js"
+    "static/css/main.19efabeb.css",
+    "static/js/main.a90cdcfa.js"
   ]
 }
