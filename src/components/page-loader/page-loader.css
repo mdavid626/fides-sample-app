@@ -1,0 +1,9 @@
+.PageLoader-errorMessage {
+  color: #f00;
+}
+
+.PageLoader-spinner {
+  width: 80px;
+  height: 80px;
+  margin: 130px auto 0 auto;
+}

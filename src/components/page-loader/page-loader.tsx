@@ -1,4 +1,7 @@
 import React from 'react';
+import Spinner from '../../assets/spinner.svg';
+
+import './page-loader.css';
 
 const PageLoader: React.FC<{
   isLoading?: boolean;
@@ -6,10 +9,10 @@ const PageLoader: React.FC<{
   children: JSX.Element;
 }> = ({ isLoading, errorMessage, children }) => {
   if (errorMessage) {
-    return <div>{errorMessage}</div>;
+    return <div className="PageLoader-errorMessage">{errorMessage}</div>;
   }
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <img src={Spinner} className="PageLoader-spinner" />;
   }
   return children;
 };

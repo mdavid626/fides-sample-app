@@ -3,6 +3,7 @@
   padding: var(--page-padding);
   max-width: var(--page-width);
   background-color: var(--page-background);
+  min-height: var(--page-min-height);
   display: flex;
   flex-direction: column;
   gap: 16px;
