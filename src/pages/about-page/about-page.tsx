@@ -8,7 +8,7 @@ const AboutPage: React.FC = () => (
     <Header />
     <div className="AboutPage-content">
       <div className="AboutPage-description">
-        Simple React app created for Fides as an interview task
+        Simple React app created for Fides
       </div>
       <div>
         Created by: <a href="https://mdavid626.com">Dávid Molnár</a>
