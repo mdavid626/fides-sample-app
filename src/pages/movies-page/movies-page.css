@@ -14,3 +14,13 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.MoviesPage-movies {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.MoviesPage-pagination {
+  align-self: flex-end;
+}

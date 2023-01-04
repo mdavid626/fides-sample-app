@@ -18,4 +18,5 @@ export type Movie = {
 export type MoviesResponse = {
   page: number;
   results: Movie[];
+  total_pages: number;
 };

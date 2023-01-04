@@ -6,7 +6,7 @@ import './page-loader.css';
 const PageLoader: React.FC<{
   isLoading?: boolean;
   errorMessage?: string;
-  children: JSX.Element;
+  children: JSX.Element | null;
 }> = ({ isLoading, errorMessage, children }) => {
   if (errorMessage) {
     return <div className="PageLoader-errorMessage">{errorMessage}</div>;

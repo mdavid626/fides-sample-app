@@ -1,0 +1,8 @@
+.Pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.Pagination-arrow {
+  cursor: pointer;
+}
