@@ -1,11 +1,11 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/sidebar';
+import Header from '../../components/header/header';
 
 import './about-page.css';
 
 const AboutPage: React.FC = () => (
   <div className="AboutPage">
-    <Sidebar />
+    <Header />
     <div className="AboutPage-content">
       <div>Simple React app created for Fides as an interview task.</div>
       <div>Created by: Dávid Molnár</div>

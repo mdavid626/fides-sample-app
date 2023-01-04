@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from './sidebar';
+import Header from './header';
 import { renderWithRouter } from '../../testing-library/render';
 
-describe('sidebar', () => {
+describe('header', () => {
   it('should render', () => {
-    const { asFragment } = renderWithRouter(<Sidebar />);
+    const { asFragment } = renderWithRouter(<Header />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

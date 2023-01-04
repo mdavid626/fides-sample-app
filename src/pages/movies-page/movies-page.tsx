@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/sidebar';
+import Header from '../../components/header/header';
 import PageLoader from '../../components/page-loader/page-loader';
 import { useMovies } from '../../hooks/movies-hooks/movies-hooks';
 import MovieItem from '../../components/movie-item/movie-item';
@@ -10,7 +10,7 @@ const MoviesPage: React.FC = () => {
   const [movies, isFetching, error] = useMovies();
   return (
     <div className="MoviesPage">
-      <Sidebar />
+      <Header />
       <PageLoader isLoading={isFetching} errorMessage={error?.message}>
         <div className="MoviesPage-content">
           {movies &&

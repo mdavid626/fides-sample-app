@@ -1,16 +1,16 @@
-.Sidebar {
+.Header {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.Sidebar-header {
+.Header-title {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
 }
 
-.Sidebar-navigation {
+.Header-navigation {
   display: flex;
   gap: 8px;
 }

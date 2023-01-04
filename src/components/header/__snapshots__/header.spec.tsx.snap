@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sidebar should render 1`] = `
+exports[`header should render 1`] = `
 <DocumentFragment>
   <div
-    class="Sidebar"
+    class="Header"
   >
     <div
-      class="Sidebar-header"
+      class="Header-title"
     >
       Fides Sample App
     </div>
     <div
-      class="Sidebar-navigation"
+      class="Header-navigation"
     >
       <a
         href="/"
