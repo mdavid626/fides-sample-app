@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppRouter from './app-router/app-router';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import AppRouter from './app-router/app-router';
+import ErrorBoundary from './components/error-boundary/error-boundary';
 
 import './index.css';
 
@@ -22,8 +23,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <AppRouter />
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <AppRouter />
+      </QueryClientProvider>
+    </ErrorBoundary>
   </React.StrictMode>
 );

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { render } from '@testing-library/react';
 
-export const renderWithRouter = (component: JSX.Element) => {
+export const renderWithRouter = (component: ReactElement) => {
   const router = {} as { current?: ReturnType<typeof createMemoryRouter> };
   return {
     ...render(component, {

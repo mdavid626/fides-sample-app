@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Spinner from '../../assets/spinner.svg';
 
 import './page-loader.css';
@@ -6,7 +6,7 @@ import './page-loader.css';
 const PageLoader: React.FC<{
   isLoading?: boolean;
   errorMessage?: string;
-  children: JSX.Element | null;
+  children: ReactElement | null;
 }> = ({ isLoading, errorMessage, children }) => {
   if (errorMessage) {
     return <div className="PageLoader-errorMessage">{errorMessage}</div>;
