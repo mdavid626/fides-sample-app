@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import AppRouter from './app-router/app-router';
+import Router from './router/router';
 import ErrorBoundary from './components/error-boundary/error-boundary';
 
 import './index.css';
@@ -25,7 +25,7 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <AppRouter />
+        <Router />
       </QueryClientProvider>
     </ErrorBoundary>
   </React.StrictMode>

@@ -4,7 +4,7 @@ import MoviesPage from '../pages/movies-page/movies-page';
 import AboutPage from '../pages/about-page/about-page';
 import FavouritesPage from '../pages/favourites-page/favourites-page';
 
-const AppRouter: React.FC = () => (
+const Router: React.FC = () => (
   <HashRouter>
     <Routes>
       <Route path="/" element={<MoviesPage />} />
@@ -15,4 +15,4 @@ const AppRouter: React.FC = () => (
   </HashRouter>
 );
 
-export default AppRouter;
+export default Router;
