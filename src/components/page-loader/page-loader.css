@@ -1,5 +1,6 @@
 .PageLoader-errorMessage {
   color: #f00;
+  flex: 1;
 }
 
 .PageLoader-spinner {
