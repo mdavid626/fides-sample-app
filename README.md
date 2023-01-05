@@ -12,5 +12,7 @@ Linting rules are enforced using `eslint` and `prettier`.
 
 Client side routing is done using `react-router`. Data loading is managed by `react-query`. Dates are parsed and formatted using `date-fns`.
 
+The app has 100% coverage of unit and integration test.
+
 ## Deployment
 The application is deployed using GitHub pages. `gh-pages` package handles the deployment by building the application and pushing the files to the `gh-pages` branch. The deployment can be triggered using `npm run deploy`.
