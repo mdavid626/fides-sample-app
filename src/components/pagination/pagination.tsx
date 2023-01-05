@@ -9,32 +9,30 @@ const Pagination: React.FC<{
   goNext: () => void;
   goPrevious: () => void;
   className?: string;
-}> = ({ currentPage, numberOfPages, goNext, goPrevious, className }) => {
-  return (
-    <div className={classnames('Pagination', className)}>
-      {currentPage > 1 && (
-        <div
-          onClick={goPrevious}
-          className="Pagination-arrow"
-          title="Go to previous page"
-        >
-          «
-        </div>
-      )}
-      <div>
-        {currentPage}/{numberOfPages}
+}> = ({ currentPage, numberOfPages, goNext, goPrevious, className }) => (
+  <div className={classnames('Pagination', className)}>
+    {currentPage > 1 && (
+      <div
+        onClick={() => goPrevious()}
+        className="Pagination-arrow"
+        title="Go to previous page"
+      >
+        «
       </div>
-      {currentPage < numberOfPages && (
-        <div
-          onClick={goNext}
-          className="Pagination-arrow"
-          title="Go to next page"
-        >
-          »
-        </div>
-      )}
+    )}
+    <div>
+      {currentPage}/{numberOfPages}
     </div>
-  );
-};
+    {currentPage < numberOfPages && (
+      <div
+        onClick={() => goNext()}
+        className="Pagination-arrow"
+        title="Go to next page"
+      >
+        »
+      </div>
+    )}
+  </div>
+);
 
 export default Pagination;

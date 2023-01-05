@@ -12,7 +12,14 @@ const PageLoader: React.FC<{
     return <div className="PageLoader-errorMessage">{errorMessage}</div>;
   }
   if (isLoading) {
-    return <img src={Spinner} className="PageLoader-spinner" />;
+    return (
+      <img
+        src={Spinner}
+        className="PageLoader-spinner"
+        alt="loading spinner"
+        data-testid="PageLoader-spinner"
+      />
+    );
   }
   return children;
 };

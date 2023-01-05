@@ -21,7 +21,11 @@ const MovieItem: React.FC<{
     useRemoveFromFavourites();
   return (
     <div className={classnames('MovieItem', className)} data-testid="MovieItem">
-      <img src={movie.poster_path} className="MovieItem-poster" />
+      <img
+        src={movie.poster_path}
+        className="MovieItem-poster"
+        alt="movie poster"
+      />
       <div className="MovieItem-titleAndOverview">
         <div className="MovieItem-title">{movie.title}</div>
         <div className="MovieItem-overview">{movie.overview}</div>
@@ -43,6 +47,7 @@ const MovieItem: React.FC<{
                 ? undefined
                 : () => removeFromFavourites(movie)
             }
+            alt="Remove from favourites"
           />
         ) : (
           <img
@@ -54,6 +59,7 @@ const MovieItem: React.FC<{
                 ? undefined
                 : () => addToFavourites(movie)
             }
+            alt="Add to favourites"
           />
         )}
       </div>
