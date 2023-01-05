@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/fides-sample-app/static/css/main.edcd3f8a.css",
-    "main.js": "/fides-sample-app/static/js/main.24d49e2a.js",
+    "main.css": "/fides-sample-app/static/css/main.d83f634a.css",
+    "main.js": "/fides-sample-app/static/js/main.ec092e98.js",
     "static/media/spinner.svg": "/fides-sample-app/static/media/spinner.328d338fb359dbbc3c4b0c924c7b06f2.svg",
     "static/media/star-filled.svg": "/fides-sample-app/static/media/star-filled.48393af04b889c4d1a78a91596c85e1a.svg",
     "static/media/star.svg": "/fides-sample-app/static/media/star.94b5708d5ee51d59ecd8e04ea3461f9c.svg",
     "index.html": "/fides-sample-app/index.html",
-    "main.edcd3f8a.css.map": "/fides-sample-app/static/css/main.edcd3f8a.css.map",
-    "main.24d49e2a.js.map": "/fides-sample-app/static/js/main.24d49e2a.js.map"
+    "main.d83f634a.css.map": "/fides-sample-app/static/css/main.d83f634a.css.map",
+    "main.ec092e98.js.map": "/fides-sample-app/static/js/main.ec092e98.js.map"
   },
   "entrypoints": [
-    "static/css/main.edcd3f8a.css",
-    "static/js/main.24d49e2a.js"
+    "static/css/main.d83f634a.css",
+    "static/js/main.ec092e98.js"
   ]
 }
