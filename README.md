@@ -12,6 +12,8 @@ Linting rules are enforced using `eslint` and `prettier`.
 
 Client side routing is done using `react-router`. Data loading is managed by `react-query`. Dates are parsed and formatted using `date-fns`.
 
+Mobile screen sizes are supported using media queries.
+
 The app has 100% coverage of unit and integration test.
 
 ## Deployment
