@@ -34,7 +34,7 @@
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
+    "lint:fix": "npm run lint -- --fix",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
