@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { InitialEntry, Location } from '@remix-run/router';
 import { Queries, queries } from '@testing-library/dom';
 import {
