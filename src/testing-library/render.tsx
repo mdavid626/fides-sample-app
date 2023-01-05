@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { MemoryRouter, useLocation, useNavigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { InitialEntry } from '@remix-run/router';
+import { InitialEntry, Location } from '@remix-run/router';
 import {
   render,
   renderHook,
@@ -9,27 +9,104 @@ import {
   RenderOptions,
 } from '@testing-library/react';
 import { queries, Queries } from '@testing-library/dom';
+import { NavigateFunction } from 'react-router/dist/lib/hooks';
 
 export const renderWithRouter = (
   component: ReactElement,
-  options?: Omit<RenderOptions, 'queries'>
+  options?: Omit<RenderOptions, 'queries'>,
+  initialEntries?: InitialEntry[]
 ) => {
-  const router = {} as { current?: ReturnType<typeof createMemoryRouter> };
+  const router = {} as {
+    location?: Location;
+    navigate?: NavigateFunction;
+  };
   return {
     ...render(component, {
       wrapper: ({ children }) => {
-        const memoryRouter = createMemoryRouter([
-          {
-            path: '',
-            element: children,
-          },
-        ]);
-        router.current = memoryRouter;
-        return <RouterProvider router={memoryRouter} />;
+        const Children = () => {
+          router.location = useLocation();
+          router.navigate = useNavigate();
+          return children;
+        };
+        return (
+          <MemoryRouter initialEntries={initialEntries}>
+            <Children />
+          </MemoryRouter>
+        );
       },
       ...options,
     }),
     router,
+  };
+};
+
+export const renderWithQueryClient = (
+  component: ReactElement,
+  options?: Omit<RenderOptions, 'queries'>
+) => {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+        refetchOnMount: false,
+        retry: false,
+        staleTime: 0,
+      },
+    },
+  });
+  return {
+    ...render(component, {
+      wrapper: ({ children }) => (
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      ),
+      ...options,
+    }),
+    queryClient,
+  };
+};
+
+export const renderWithRouterQueryClient = (
+  component: ReactElement,
+  options?: Omit<RenderOptions, 'queries'>,
+  initialEntries?: InitialEntry[]
+) => {
+  const router = {} as {
+    location?: Location;
+    navigate?: NavigateFunction;
+  };
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+        refetchOnMount: false,
+        retry: false,
+        staleTime: 0,
+      },
+    },
+  });
+  return {
+    ...render(component, {
+      wrapper: ({ children }) => {
+        const Children = () => {
+          router.location = useLocation();
+          router.navigate = useNavigate();
+          return children;
+        };
+        return (
+          <QueryClientProvider client={queryClient}>
+            <MemoryRouter initialEntries={initialEntries}>
+              <Children />
+            </MemoryRouter>
+          </QueryClientProvider>
+        );
+      },
+      ...options,
+    }),
+    queryClient,
   };
 };
 
@@ -78,21 +155,23 @@ export const renderHookWithRouter = <
   options?: RenderHookOptions<Props, Q, Container, BaseElement>,
   initialEntries?: InitialEntry[]
 ) => {
-  const router = {} as { current?: ReturnType<typeof createMemoryRouter> };
+  const router = {} as {
+    location?: Location;
+    navigate?: NavigateFunction;
+  };
   return {
     ...renderHook(render, {
       wrapper: ({ children }) => {
-        const memoryRouter = createMemoryRouter(
-          [
-            {
-              path: '',
-              element: children,
-            },
-          ],
-          { initialEntries }
+        const Children = () => {
+          router.location = useLocation();
+          router.navigate = useNavigate();
+          return children;
+        };
+        return (
+          <MemoryRouter initialEntries={initialEntries}>
+            <Children />
+          </MemoryRouter>
         );
-        router.current = memoryRouter;
-        return <RouterProvider router={memoryRouter} />;
       },
       ...options,
     }),

@@ -33,8 +33,8 @@ describe('movie-item', () => {
 
   it('should add custom className', () => {
     render(<MovieItem movie={movie1} className="myClassName" />);
-    expect(screen.getByTestId('MovieItem')).toHaveClass('MovieItem');
-    expect(screen.getByTestId('MovieItem')).toHaveClass('myClassName');
+    expect(screen.getByTestId('MovieItem-76600')).toHaveClass('MovieItem');
+    expect(screen.getByTestId('MovieItem-76600')).toHaveClass('myClassName');
   });
 
   it('should be able to add to favourites', () => {

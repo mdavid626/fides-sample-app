@@ -4,7 +4,7 @@ exports[`movie-item should render 1`] = `
 <DocumentFragment>
   <div
     class="MovieItem"
-    data-testid="MovieItem"
+    data-testid="MovieItem-76600"
   >
     <img
       alt="movie poster"

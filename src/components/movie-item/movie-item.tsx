@@ -20,7 +20,10 @@ const MovieItem: React.FC<{
   const [removeFromFavourites, isRemoveFromFavouritesLoading] =
     useRemoveFromFavourites();
   return (
-    <div className={classnames('MovieItem', className)} data-testid="MovieItem">
+    <div
+      className={classnames('MovieItem', className)}
+      data-testid={`MovieItem-${movie.id}`}
+    >
       <img
         src={movie.poster_path}
         className="MovieItem-poster"

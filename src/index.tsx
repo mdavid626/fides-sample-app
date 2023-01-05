@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Router from './router/router';
 import ErrorBoundary from './components/error-boundary/error-boundary';
+import Routes from './router/routes';
 
 import './index.css';
 
@@ -25,7 +26,9 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <Router />
+        <HashRouter>
+          <Routes />
+        </HashRouter>
       </QueryClientProvider>
     </ErrorBoundary>
   </React.StrictMode>

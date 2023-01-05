@@ -42,7 +42,7 @@ describe('pagination-hooks', () => {
       await waitFor(() => {
         expect(result.current[0]).toBe(2);
       });
-      expect(router.current?.state.location.search).toBe('?page=2&test=1');
+      expect(router.location?.search).toBe('?page=2&test=1');
     });
 
     it('should go to previous page', async () => {
@@ -57,7 +57,7 @@ describe('pagination-hooks', () => {
       await waitFor(() => {
         expect(result.current[0]).toBe(2);
       });
-      expect(router.current?.state.location.search).toBe('?page=2&test=1');
+      expect(router.location?.search).toBe('?page=2&test=1');
     });
   });
 });
