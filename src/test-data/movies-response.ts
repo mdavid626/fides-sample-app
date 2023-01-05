@@ -1,4 +1,4 @@
-import { MoviesResponse } from '../../types/movies-response';
+import { MoviesResponse } from '../types/movies-response';
 import { movies } from './movies';
 
 export const moviesResponse1: MoviesResponse = {

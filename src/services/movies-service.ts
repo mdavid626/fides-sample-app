@@ -1,4 +1,4 @@
-import { Movie, MoviesResponse } from '../../types/movies-response';
+import { Movie, MoviesResponse } from '../types/movies-response';
 
 const getMovies = (pageNumber: number): Promise<MoviesResponse> =>
   fetch(

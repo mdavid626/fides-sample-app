@@ -1,4 +1,4 @@
-import { Movie } from '../../types/movies-response';
+import { Movie } from '../types/movies-response';
 
 export const movie1: Movie = {
   adult: false,

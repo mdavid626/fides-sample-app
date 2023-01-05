@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from 'react-query';
 import moviesService from '../../services/movies-service';
-import { Movie, MoviesResponse } from '../../../types/movies-response';
+import { Movie, MoviesResponse } from '../../types/movies-response';
 
 export const useMovies = (
   currentPage: number

@@ -5,7 +5,7 @@ import {
   useAddToFavourites,
   useRemoveFromFavourites,
 } from '../../hooks/movies-hooks/movies-hooks';
-import { Movie } from '../../../types/movies-response';
+import { Movie } from '../../types/movies-response';
 import StarIcon from '../../assets/star.svg';
 import StarFilledIcon from '../../assets/star-filled.svg';
 
