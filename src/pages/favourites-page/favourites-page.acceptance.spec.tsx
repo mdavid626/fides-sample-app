@@ -1,9 +1,9 @@
-import React from 'react';
 import { cleanup, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import Routes from '../../router/routes';
-import { renderWithRouterQueryClient } from '../../testing-library/render';
 import { movie1, movie2 } from '../../test-data/movies';
+import { renderWithRouterQueryClient } from '../../testing-library/render';
 
 describe('[Acceptance] favourites-page', () => {
   afterEach(cleanup);

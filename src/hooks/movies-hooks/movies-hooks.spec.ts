@@ -1,11 +1,11 @@
 import { cleanup, waitFor } from '@testing-library/react';
 import moviesService from '../../services/movies-service';
-import { renderHookWithQueryClient } from '../../testing-library/render';
 import { movie1, movies } from '../../test-data/movies';
+import { renderHookWithQueryClient } from '../../testing-library/render';
 import {
-  useMovies,
-  useFavourites,
   useAddToFavourites,
+  useFavourites,
+  useMovies,
   useRemoveFromFavourites,
 } from './movies-hooks';
 

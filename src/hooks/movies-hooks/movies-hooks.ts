@@ -1,4 +1,4 @@
-import { useQuery, useMutation, useQueryClient } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from 'react-query';
 import moviesService from '../../services/movies-service';
 import { Movie, MoviesResponse } from '../../types/movies-response';
 

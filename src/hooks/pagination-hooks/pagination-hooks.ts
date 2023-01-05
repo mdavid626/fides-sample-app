@@ -1,5 +1,5 @@
-import { useLocation, useNavigate } from 'react-router-dom';
 import { useCallback, useMemo } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const usePagination = (): [number, () => void, () => void] => {
   const location = useLocation();

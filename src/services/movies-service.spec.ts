@@ -1,7 +1,7 @@
 import fetchMock from 'jest-fetch-mock';
+import { movie1, movie2, movie3, movies } from '../test-data/movies';
 import { moviesResponse1 } from '../test-data/movies-response';
 import moviesService from './movies-service';
-import { movie1, movie2, movie3, movies } from '../test-data/movies';
 
 describe('movies-service', () => {
   beforeEach(() => {

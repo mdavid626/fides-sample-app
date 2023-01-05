@@ -1,15 +1,14 @@
 import React from 'react';
-import Header from '../../components/header/header';
-import PageLoader from '../../components/page-loader/page-loader';
-import MovieItem from '../../components/movie-item/movie-item';
-import Pagination from '../../components/pagination/pagination';
 import Footer from '../../components/footer/footer';
+import Header from '../../components/header/header';
+import MovieItem from '../../components/movie-item/movie-item';
+import PageLoader from '../../components/page-loader/page-loader';
+import Pagination from '../../components/pagination/pagination';
 import {
   useFavourites,
   useMovies,
 } from '../../hooks/movies-hooks/movies-hooks';
 import { usePagination } from '../../hooks/pagination-hooks/pagination-hooks';
-
 import './movies-page.css';
 
 const MoviesPage: React.FC = () => {

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../../components/header/header';
-import PageLoader from '../../components/page-loader/page-loader';
-import MovieItem from '../../components/movie-item/movie-item';
 import Footer from '../../components/footer/footer';
+import Header from '../../components/header/header';
+import MovieItem from '../../components/movie-item/movie-item';
+import PageLoader from '../../components/page-loader/page-loader';
 import { useFavourites } from '../../hooks/movies-hooks/movies-hooks';
-
 import './favourites-page.css';
 
 const FavouritesPage: React.FC = () => {

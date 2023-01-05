@@ -1,10 +1,9 @@
-import React from 'react';
 import { cleanup, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { renderWithRouter } from '../testing-library/render';
-import MoviesPage from '../pages/movies-page/movies-page';
+import React from 'react';
 import AboutPage from '../pages/about-page/about-page';
 import FavouritesPage from '../pages/favourites-page/favourites-page';
+import MoviesPage from '../pages/movies-page/movies-page';
+import { renderWithRouter } from '../testing-library/render';
 import Routes from './routes';
 
 jest.mock('../pages/movies-page/movies-page');

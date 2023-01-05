@@ -1,5 +1,5 @@
-import React from 'react';
 import { cleanup } from '@testing-library/react';
+import React from 'react';
 import { renderWithRouter } from '../../testing-library/render';
 import Header from './header';
 

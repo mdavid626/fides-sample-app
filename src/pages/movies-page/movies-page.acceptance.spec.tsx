@@ -1,11 +1,11 @@
-import React from 'react';
 import { cleanup, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import fetchMock from 'jest-fetch-mock';
+import React from 'react';
 import Routes from '../../router/routes';
-import { renderWithRouterQueryClient } from '../../testing-library/render';
-import { moviesResponse1 } from '../../test-data/movies-response';
 import { movie1 } from '../../test-data/movies';
+import { moviesResponse1 } from '../../test-data/movies-response';
+import { renderWithRouterQueryClient } from '../../testing-library/render';
 
 describe('[Acceptance] movies-page', () => {
   beforeEach(() => {

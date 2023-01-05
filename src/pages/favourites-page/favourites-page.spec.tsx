@@ -1,7 +1,7 @@
-import React from 'react';
 import { cleanup, screen } from '@testing-library/react';
-import Header from '../../components/header/header';
+import React from 'react';
 import Footer from '../../components/footer/footer';
+import Header from '../../components/header/header';
 import MovieItem from '../../components/movie-item/movie-item';
 import { useFavourites } from '../../hooks/movies-hooks/movies-hooks';
 import { movies } from '../../test-data/movies';

@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import Spinner from '../../assets/spinner.svg';
-
 import './page-loader.css';
 
 const PageLoader: React.FC<{

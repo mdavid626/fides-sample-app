@@ -1,5 +1,5 @@
-import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
+import React from 'react';
 import PageLoader from './page-loader';
 
 describe('page-loader', () => {

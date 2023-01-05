@@ -1,7 +1,7 @@
-import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
-import Header from '../../components/header/header';
+import React from 'react';
 import Footer from '../../components/footer/footer';
+import Header from '../../components/header/header';
 import MovieItem from '../../components/movie-item/movie-item';
 import Pagination from '../../components/pagination/pagination';
 import {

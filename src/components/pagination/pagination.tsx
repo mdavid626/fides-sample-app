@@ -1,6 +1,5 @@
-import React from 'react';
 import classnames from 'classnames';
-
+import React from 'react';
 import './pagination.css';
 
 const Pagination: React.FC<{

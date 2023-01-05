@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navigate, Route, Routes as RouterRoutes } from 'react-router-dom';
-import MoviesPage from '../pages/movies-page/movies-page';
 import AboutPage from '../pages/about-page/about-page';
 import FavouritesPage from '../pages/favourites-page/favourites-page';
+import MoviesPage from '../pages/movies-page/movies-page';
 
 const ErrorPage: React.FC = () => {
   throw new Error('test error');

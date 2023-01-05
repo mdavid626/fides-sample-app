@@ -1,14 +1,13 @@
-import React from 'react';
 import classnames from 'classnames';
-import { parse, format } from 'date-fns';
+import { format, parse } from 'date-fns';
+import React from 'react';
+import StarFilledIcon from '../../assets/star-filled.svg';
+import StarIcon from '../../assets/star.svg';
 import {
   useAddToFavourites,
   useRemoveFromFavourites,
 } from '../../hooks/movies-hooks/movies-hooks';
 import { Movie } from '../../types/movies-response';
-import StarIcon from '../../assets/star.svg';
-import StarFilledIcon from '../../assets/star-filled.svg';
-
 import './movie-item.css';
 
 const MovieItem: React.FC<{

@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { HashRouter } from 'react-router-dom';
 import ErrorBoundary from './components/error-boundary/error-boundary';
-import Routes from './router/routes';
-
 import './index.css';
+import Routes from './router/routes';
 
 const queryClient = new QueryClient({
   defaultOptions: {
