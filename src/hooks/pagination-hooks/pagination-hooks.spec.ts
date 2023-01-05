@@ -1,4 +1,4 @@
-import { cleanup, waitFor } from '@testing-library/react';
+import { act, cleanup, waitFor } from '@testing-library/react';
 import { renderHookWithRouter } from '../../testing-library/render';
 import { usePagination } from './pagination-hooks';
 
@@ -36,7 +36,9 @@ describe('pagination-hooks', () => {
         undefined,
         ['/?page=1&test=1']
       );
-      result.current[1]();
+      act(() => {
+        result.current[1]();
+      });
       await waitFor(() => {
         expect(result.current[0]).toBe(2);
       });
@@ -49,7 +51,9 @@ describe('pagination-hooks', () => {
         undefined,
         ['/?page=3&test=1']
       );
-      result.current[2]();
+      act(() => {
+        result.current[2]();
+      });
       await waitFor(() => {
         expect(result.current[0]).toBe(2);
       });
