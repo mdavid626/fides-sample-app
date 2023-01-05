@@ -39,7 +39,7 @@
   padding: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .FavouritesPage-movie {
     border: none;
     padding: 0;

@@ -11,18 +11,24 @@
 }
 
 .ErrorBoundary-title {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   text-align: center;
   background: var(--primary-color);
   padding: var(--space1) var(--space2);
-  width: min-content;
-  white-space: nowrap;
   border-radius: 5px;
   margin: 30px 0 0 0;
+}
+
+@media (min-width: 1024px) {
+  .ErrorBoundary-title {
+    font-size: 32px;
+    white-space: nowrap;
+  }
 }
 
 .ErrorBoundary-description {
   font-size: 40px;
   margin: 90px 0 0 0;
+  text-align: center;
 }

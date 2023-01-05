@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .MovieItem {
     flex-direction: row;
     align-items: flex-start;
@@ -20,7 +20,7 @@
   gap: var(--space2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .MovieItem-titleAndOverview {
     text-align: left;
     gap: 0;

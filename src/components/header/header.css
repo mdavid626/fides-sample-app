@@ -14,7 +14,7 @@
   border-radius: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .Header-title {
     font-size: 32px;
     white-space: nowrap;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .Header-navigation {
     flex-direction: row;
   }
