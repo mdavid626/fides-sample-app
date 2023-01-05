@@ -1,9 +1,15 @@
 :root {
-  --page-margin: 0 auto;
+  --page-margin: 8px;
   --page-width: 965px;
   --page-background: #fff;
   --page-padding: 16px;
   --page-min-height: 477px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-margin: 0 auto;
+  }
 }
 
 body {

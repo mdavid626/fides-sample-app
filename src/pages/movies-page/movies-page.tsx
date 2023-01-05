@@ -40,6 +40,7 @@ const MoviesPage: React.FC = () => {
                   isFavourite={favourites.some(
                     (favouriteMovie) => favouriteMovie.id === movie.id
                   )}
+                  className="MoviesPage-movie"
                 />
               ))}
             </div>

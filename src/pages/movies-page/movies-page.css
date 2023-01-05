@@ -24,3 +24,20 @@
 .MoviesPage-pagination {
   align-self: flex-end;
 }
+
+.MoviesPage-movie {
+  border-bottom: 1px solid #dedede;
+  padding: 0 0 16px 0;
+}
+
+.MoviesPage-movie:last-of-type {
+  border-bottom: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .MoviesPage-movie {
+    border: none;
+    padding: 0;
+  }
+}

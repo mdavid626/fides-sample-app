@@ -1,9 +1,11 @@
 .Pagination {
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 
 .Pagination-arrow {
   cursor: pointer;
   user-select: none;
+  font-size: 20px;
 }

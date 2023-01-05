@@ -1,10 +1,26 @@
 .MovieItem {
   display: flex;
   gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .MovieItem {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .MovieItem-titleAndOverview {
   flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .MovieItem-titleAndOverview {
+    text-align: left;
+  }
 }
 
 .MovieItem-title {

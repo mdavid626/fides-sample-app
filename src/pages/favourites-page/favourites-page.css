@@ -22,8 +22,26 @@
   justify-content: center;
   flex: 1;
   gap: 8px;
+  text-align: center;
 }
 
 .FavouritesPage-emptyContentTitle {
   font-size: 24px;
+}
+
+.FavouritesPage-movie {
+  border-bottom: 1px solid #dedede;
+  padding: 0 0 16px 0;
+}
+
+.FavouritesPage-movie:last-of-type {
+  border-bottom: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .FavouritesPage-movie {
+    border: none;
+    padding: 0;
+  }
 }

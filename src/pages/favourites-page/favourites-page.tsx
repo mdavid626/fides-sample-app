@@ -22,7 +22,12 @@ const FavouritesPage: React.FC = () => {
             {favourites.length > 0 ? (
               <div className="FavouritesPage-movies">
                 {favourites.map((movie) => (
-                  <MovieItem key={movie.id} movie={movie} isFavourite />
+                  <MovieItem
+                    key={movie.id}
+                    movie={movie}
+                    isFavourite
+                    className="FavouritesPage-movie"
+                  />
                 ))}
               </div>
             ) : (

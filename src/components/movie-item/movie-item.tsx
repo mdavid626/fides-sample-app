@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import { parse, format } from 'date-fns';
 import { Movie } from '../../../types/movies-response';
 import StarIcon from '../../assets/star.svg';
@@ -10,15 +11,16 @@ import {
   useRemoveFromFavourites,
 } from '../../hooks/movies-hooks/movies-hooks';
 
-const MovieItem: React.FC<{ movie: Movie; isFavourite?: boolean }> = ({
-  movie,
-  isFavourite,
-}) => {
+const MovieItem: React.FC<{
+  movie: Movie;
+  isFavourite?: boolean;
+  className?: string;
+}> = ({ movie, isFavourite, className }) => {
   const [addToFavourites, isAddToFavouritesLoading] = useAddToFavourites();
   const [removeFromFavourites, isRemoveFromFavouritesLoading] =
     useRemoveFromFavourites();
   return (
-    <div className="MovieItem">
+    <div className={classnames('MovieItem', className)}>
       <img src={movie.poster_path} className="MovieItem-poster" />
       <div className="MovieItem-titleAndOverview">
         <div className="MovieItem-title">{movie.title}</div>
