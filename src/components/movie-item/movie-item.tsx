@@ -1,15 +1,15 @@
 import React from 'react';
 import classnames from 'classnames';
 import { parse, format } from 'date-fns';
+import {
+  useAddToFavourites,
+  useRemoveFromFavourites,
+} from '../../hooks/movies-hooks/movies-hooks';
 import { Movie } from '../../../types/movies-response';
 import StarIcon from '../../assets/star.svg';
 import StarFilledIcon from '../../assets/star-filled.svg';
 
 import './movie-item.css';
-import {
-  useAddToFavourites,
-  useRemoveFromFavourites,
-} from '../../hooks/movies-hooks/movies-hooks';
 
 const MovieItem: React.FC<{
   movie: Movie;
@@ -20,7 +20,7 @@ const MovieItem: React.FC<{
   const [removeFromFavourites, isRemoveFromFavouritesLoading] =
     useRemoveFromFavourites();
   return (
-    <div className={classnames('MovieItem', className)}>
+    <div className={classnames('MovieItem', className)} data-testid="MovieItem">
       <img src={movie.poster_path} className="MovieItem-poster" />
       <div className="MovieItem-titleAndOverview">
         <div className="MovieItem-title">{movie.title}</div>

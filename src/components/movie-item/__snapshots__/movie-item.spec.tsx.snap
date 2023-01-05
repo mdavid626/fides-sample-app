@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movie-item should render 1`] = `
+<DocumentFragment>
+  <div
+    class="MovieItem"
+    data-testid="MovieItem"
+  >
+    <img
+      class="MovieItem-poster"
+      src="https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
+    />
+    <div
+      class="MovieItem-titleAndOverview"
+    >
+      <div
+        class="MovieItem-title"
+      >
+        Avatar: The Way of Water
+      </div>
+      <div
+        class="MovieItem-overview"
+      >
+        Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.
+      </div>
+    </div>
+    <div
+      class="MovieItem-dateAndFavourite"
+    >
+      <div>
+        14.12.2022
+      </div>
+      <img
+        class="MovieItem-favourite"
+        src="star.svg"
+        title="Add to favourites"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

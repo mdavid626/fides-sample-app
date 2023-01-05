@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './header';
 import { renderWithRouter } from '../../testing-library/render';
+import Header from './header';
 
 describe('header', () => {
   it('should render', () => {
