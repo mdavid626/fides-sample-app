@@ -26,9 +26,11 @@ const removeFromFavourites = async (movie: Movie): Promise<Movie[]> => {
   return newFavourites;
 };
 
-export default {
+const moviesService = {
   getMovies,
   getFavourites,
   addToFavourites,
   removeFromFavourites,
 };
+
+export default moviesService;
