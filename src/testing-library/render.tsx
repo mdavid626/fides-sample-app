@@ -116,6 +116,7 @@ export const renderWithRouterQueryClient = (
       },
       ...options,
     }),
+    router,
     queryClient,
   } as RenderResult & RouterResult & QueryClientResult;
 };
