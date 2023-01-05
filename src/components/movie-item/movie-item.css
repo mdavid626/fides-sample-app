@@ -15,11 +15,15 @@
 .MovieItem-titleAndOverview {
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space2);
 }
 
 @media (min-width: 768px) {
   .MovieItem-titleAndOverview {
     text-align: left;
+    gap: 0;
   }
 }
 
