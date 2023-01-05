@@ -5,21 +5,33 @@ import {
   RenderOptions,
   render,
   renderHook,
+  RenderResult,
+  RenderHookResult,
 } from '@testing-library/react';
 import React, { ReactElement } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { MemoryRouter, useLocation, useNavigate } from 'react-router-dom';
 import { NavigateFunction } from 'react-router/dist/lib/hooks';
 
+type SimpleRouter = {
+  location?: Location;
+  navigate?: NavigateFunction;
+};
+
+type RouterResult = {
+  router: SimpleRouter;
+};
+
+type QueryClientResult = {
+  queryClient: QueryClient;
+};
+
 export const renderWithRouter = (
   component: ReactElement,
   options?: Omit<RenderOptions, 'queries'>,
   initialEntries?: InitialEntry[]
-) => {
-  const router = {} as {
-    location?: Location;
-    navigate?: NavigateFunction;
-  };
+): RenderResult & RouterResult => {
+  const router = {} as SimpleRouter;
   return {
     ...render(component, {
       wrapper: ({ children }) => {
@@ -37,13 +49,13 @@ export const renderWithRouter = (
       ...options,
     }),
     router,
-  };
+  } as RenderResult & RouterResult;
 };
 
 export const renderWithQueryClient = (
   component: ReactElement,
   options?: Omit<RenderOptions, 'queries'>
-) => {
+): RenderResult & QueryClientResult => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -65,18 +77,15 @@ export const renderWithQueryClient = (
       ...options,
     }),
     queryClient,
-  };
+  } as RenderResult & QueryClientResult;
 };
 
 export const renderWithRouterQueryClient = (
   component: ReactElement,
   options?: Omit<RenderOptions, 'queries'>,
   initialEntries?: InitialEntry[]
-) => {
-  const router = {} as {
-    location?: Location;
-    navigate?: NavigateFunction;
-  };
+): RenderResult & RouterResult & QueryClientResult => {
+  const router = {} as SimpleRouter;
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -107,7 +116,7 @@ export const renderWithRouterQueryClient = (
       ...options,
     }),
     queryClient,
-  };
+  } as RenderResult & RouterResult & QueryClientResult;
 };
 
 export const renderHookWithQueryClient = <
@@ -119,7 +128,7 @@ export const renderHookWithQueryClient = <
 >(
   render: (initialProps: Props) => Result,
   options?: RenderHookOptions<Props, Q, Container, BaseElement>
-) => {
+): RenderHookResult<Result, Props> & QueryClientResult => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -154,11 +163,8 @@ export const renderHookWithRouter = <
   render: (initialProps: Props) => Result,
   options?: RenderHookOptions<Props, Q, Container, BaseElement>,
   initialEntries?: InitialEntry[]
-) => {
-  const router = {} as {
-    location?: Location;
-    navigate?: NavigateFunction;
-  };
+): RenderHookResult<Result, Props> & RouterResult => {
+  const router = {} as SimpleRouter;
   return {
     ...renderHook(render, {
       wrapper: ({ children }) => {
