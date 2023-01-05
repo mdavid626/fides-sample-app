@@ -5,6 +5,8 @@ Live demo using GitHub Pages is available at https://mdavid626.github.io/fides-s
 
 The app shows a list of popular movies, which can be marked as favourite by the user. The list of movies is paginated and each page's data is loaded separately. The data is loaded from static mock data files. The favourites data is stored in `sessionStorage`.
 
+It was developed using the latest version of Node (v18), but should run on older version too.
+
 ## Implementation details
 The application was created using `create-react-app` with the `typescript` template. It is a client side app without any backend. It uses static data files (in `public/api/` folder) as mock API.
 
