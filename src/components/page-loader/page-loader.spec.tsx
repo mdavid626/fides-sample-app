@@ -1,8 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import PageLoader from './page-loader';
 
 describe('page-loader', () => {
+  afterEach(cleanup);
+  afterEach(jest.resetAllMocks);
+
   it('should render', () => {
     const { asFragment } = render(
       <PageLoader>

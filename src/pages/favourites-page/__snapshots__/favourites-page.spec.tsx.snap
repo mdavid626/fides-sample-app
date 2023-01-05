@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`favourites-page should render 1`] = `
+<DocumentFragment>
+  <div
+    class="FavouritesPage"
+  >
+    <div>
+      header
+    </div>
+    <div
+      class="FavouritesPage-movies"
+    >
+      <div>
+        movie-item
+      </div>
+      <div>
+        movie-item
+      </div>
+      <div>
+        movie-item
+      </div>
+    </div>
+    <div>
+      footer
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`favourites-page should render empty state text when no favourites 1`] = `
+<DocumentFragment>
+  <div
+    class="FavouritesPage"
+  >
+    <div>
+      header
+    </div>
+    <div
+      class="FavouritesPage-emptyContent"
+    >
+      <div
+        class="FavouritesPage-emptyContentTitle"
+      >
+        Oops, no favourites yet!
+      </div>
+      <div>
+        Go to 
+        <a
+          href="/"
+        >
+          Movies
+        </a>
+         to add some.
+      </div>
+    </div>
+    <div>
+      footer
+    </div>
+  </div>
+</DocumentFragment>
+`;

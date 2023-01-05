@@ -1,11 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import ErrorBoundary from './error-boundary';
 
 describe('error-boundary', () => {
   beforeEach(() => {
     jest.spyOn(console, 'error').mockReturnValue(undefined);
   });
+  afterEach(cleanup);
+  afterEach(jest.resetAllMocks);
 
   it('should render', () => {
     const { asFragment } = render(

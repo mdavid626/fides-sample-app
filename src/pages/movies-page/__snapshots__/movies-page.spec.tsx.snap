@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movies-page should render 1`] = `
+<DocumentFragment>
+  <div
+    class="MoviesPage"
+  >
+    <div>
+      header
+    </div>
+    <div
+      class="MoviesPage-content"
+    >
+      <div>
+        pagination
+      </div>
+      <div
+        class="MoviesPage-movies"
+      >
+        <div>
+          movie-item
+        </div>
+        <div>
+          movie-item
+        </div>
+        <div>
+          movie-item
+        </div>
+      </div>
+    </div>
+    <div>
+      footer
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
   useAddToFavourites,
@@ -15,6 +15,8 @@ describe('movie-item', () => {
     (useAddToFavourites as jest.Mock).mockReturnValue([jest.fn(), false]);
     (useRemoveFromFavourites as jest.Mock).mockReturnValue([jest.fn(), false]);
   });
+  afterEach(cleanup);
+  afterEach(jest.resetAllMocks);
 
   it('should render', () => {
     const { asFragment } = render(<MovieItem movie={movie1} />);
