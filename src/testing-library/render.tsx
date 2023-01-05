@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { InitialEntry } from '@remix-run/router';
 import {
   render,
   renderHook,
@@ -63,5 +64,38 @@ export const renderHookWithQueryClient = <
       ...options,
     }),
     queryClient,
+  };
+};
+
+export const renderHookWithRouter = <
+  Result,
+  Props,
+  Q extends Queries = typeof queries,
+  Container extends Element | DocumentFragment = HTMLElement,
+  BaseElement extends Element | DocumentFragment = Container
+>(
+  render: (initialProps: Props) => Result,
+  options?: RenderHookOptions<Props, Q, Container, BaseElement>,
+  initialEntries?: InitialEntry[]
+) => {
+  const router = {} as { current?: ReturnType<typeof createMemoryRouter> };
+  return {
+    ...renderHook(render, {
+      wrapper: ({ children }) => {
+        const memoryRouter = createMemoryRouter(
+          [
+            {
+              path: '',
+              element: children,
+            },
+          ],
+          { initialEntries }
+        );
+        router.current = memoryRouter;
+        return <RouterProvider router={memoryRouter} />;
+      },
+      ...options,
+    }),
+    router,
   };
 };
