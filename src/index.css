@@ -1,8 +1,12 @@
 :root {
-  --page-margin: 8px;
+  --space1: 8px;
+  --space2: 16px;
+  --primary-color: #f5c518;
+  --secondary-color: #dedede;
+  --page-margin: var(--space1);
+  --page-padding: var(--space2);
   --page-width: 965px;
   --page-background: #fff;
-  --page-padding: 16px;
   --page-min-height: 477px;
 }
 
@@ -20,7 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
-  background-color: #dbdbdb;
+  background-color: #cecece;
 }
 
 code {

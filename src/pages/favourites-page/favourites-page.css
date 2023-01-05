@@ -6,13 +6,13 @@
   min-height: var(--page-min-height);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
 }
 
 .FavouritesPage-movies {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
 }
 
 .FavouritesPage-emptyContent {
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  gap: 8px;
+  gap: var(--space1);
   text-align: center;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .FavouritesPage-movie {
-  border-bottom: 1px solid #dedede;
-  padding: 0 0 16px 0;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0 0 var(--space2) 0;
 }
 
 .FavouritesPage-movie:last-of-type {

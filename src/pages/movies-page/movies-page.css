@@ -6,19 +6,19 @@
   min-height: var(--page-min-height);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
 }
 
 .MoviesPage-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
 }
 
 .MoviesPage-movies {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
 }
 
 .MoviesPage-pagination {
@@ -26,8 +26,8 @@
 }
 
 .MoviesPage-movie {
-  border-bottom: 1px solid #dedede;
-  padding: 0 0 16px 0;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0 0 var(--space2) 0;
 }
 
 .MoviesPage-movie:last-of-type {

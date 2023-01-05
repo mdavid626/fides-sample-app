@@ -6,7 +6,7 @@
   min-height: var(--page-min-height);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
   align-items: center;
 }
 
@@ -14,8 +14,8 @@
   font-size: 28px;
   font-weight: bold;
   text-align: center;
-  background: #f5c518;
-  padding: 8px 16px;
+  background: var(--primary-color);
+  padding: var(--space1) var(--space2);
   width: min-content;
   white-space: nowrap;
   border-radius: 5px;

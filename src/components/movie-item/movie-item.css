@@ -1,6 +1,6 @@
 .MovieItem {
   display: flex;
-  gap: 16px;
+  gap: var(--space2);
   flex-direction: column;
   align-items: center;
 }
@@ -35,14 +35,14 @@
 .MovieItem-poster {
   width: 200px;
   height: 300px;
-  background-color: #efefef;
+  background-color: var(--secondary-color);
 }
 
 .MovieItem-dateAndFavourite {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: var(--space2);
   padding: 3px 0 0 0;
 }
 

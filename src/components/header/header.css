@@ -1,15 +1,15 @@
 .Header {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space2);
 }
 
 .Header-title {
   font-size: 26px;
   font-weight: bold;
   text-align: center;
-  background: #f5c518;
-  padding: 8px 16px;
+  background: var(--primary-color);
+  padding: var(--space1) var(--space2);
   align-self: center;
   border-radius: 5px;
 }
@@ -23,9 +23,9 @@
 
 .Header-navigation {
   display: flex;
-  gap: 16px;
+  gap: var(--space2);
   background-color: #000;
-  padding: 8px 16px;
+  padding: var(--space1) var(--space2);
   flex-direction: column;
   align-items: center;
 }
@@ -42,5 +42,5 @@
 }
 
 .Header-selectedLink {
-  color: #f5c518;
+  color: var(--primary-color);
 }
