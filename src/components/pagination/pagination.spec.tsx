@@ -19,7 +19,7 @@ describe('pagination', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should be able to go to previous page', () => {
+  it('should be able to go to previous page', async () => {
     const goPrevious = jest.fn();
     render(
       <Pagination
@@ -29,11 +29,11 @@ describe('pagination', () => {
         goPrevious={goPrevious}
       />
     );
-    userEvent.click(screen.getByTitle('Go to previous page'));
+    await userEvent.click(screen.getByTitle('Go to previous page'));
     expect(goPrevious).toHaveBeenCalledWith();
   });
 
-  it('should be able to go to next page', () => {
+  it('should be able to go to next page', async () => {
     const goNext = jest.fn();
     render(
       <Pagination
@@ -43,7 +43,7 @@ describe('pagination', () => {
         goPrevious={jest.fn()}
       />
     );
-    userEvent.click(screen.getByTitle('Go to next page'));
+    await userEvent.click(screen.getByTitle('Go to next page'));
     expect(goNext).toHaveBeenCalledWith();
   });
 

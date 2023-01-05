@@ -37,41 +37,41 @@ describe('movie-item', () => {
     expect(screen.getByTestId('MovieItem-76600')).toHaveClass('myClassName');
   });
 
-  it('should be able to add to favourites', () => {
+  it('should be able to add to favourites', async () => {
     const addToFavourites = jest.fn();
     (useAddToFavourites as jest.Mock).mockReturnValue([addToFavourites, false]);
     render(<MovieItem movie={movie1} />);
-    userEvent.click(screen.getByTitle('Add to favourites'));
+    await userEvent.click(screen.getByTitle('Add to favourites'));
     expect(addToFavourites).toHaveBeenCalledWith(movie1);
   });
 
-  it('should not be able to add to favourites when adding is in progress', () => {
+  it('should not be able to add to favourites when adding is in progress', async () => {
     const addToFavourites = jest.fn();
     (useAddToFavourites as jest.Mock).mockReturnValue([addToFavourites, true]);
     render(<MovieItem movie={movie1} />);
-    userEvent.click(screen.getByTitle('Add to favourites'));
+    await userEvent.click(screen.getByTitle('Add to favourites'));
     expect(addToFavourites).not.toHaveBeenCalled();
   });
 
-  it('should be able to remove from favourites', () => {
+  it('should be able to remove from favourites', async () => {
     const removeFromFavourites = jest.fn();
     (useRemoveFromFavourites as jest.Mock).mockReturnValue([
       removeFromFavourites,
       false,
     ]);
     render(<MovieItem movie={movie1} isFavourite />);
-    userEvent.click(screen.getByTitle('Remove from favourites'));
+    await userEvent.click(screen.getByTitle('Remove from favourites'));
     expect(removeFromFavourites).toHaveBeenCalledWith(movie1);
   });
 
-  it('should not be able to remove from favourites when remove is in progress', () => {
+  it('should not be able to remove from favourites when remove is in progress', async () => {
     const removeFromFavourites = jest.fn();
     (useRemoveFromFavourites as jest.Mock).mockReturnValue([
       removeFromFavourites,
       true,
     ]);
     render(<MovieItem movie={movie1} isFavourite />);
-    userEvent.click(screen.getByTitle('Remove from favourites'));
+    await userEvent.click(screen.getByTitle('Remove from favourites'));
     expect(removeFromFavourites).not.toHaveBeenCalled();
   });
 });

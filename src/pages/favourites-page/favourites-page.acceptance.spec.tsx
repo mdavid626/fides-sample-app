@@ -42,7 +42,7 @@ describe('[Acceptance] favourites-page', () => {
     );
     renderWithRouterQueryClient(<Routes />, undefined, ['/favourites']);
     await screen.findByText('Avatar: The Way of Water');
-    userEvent.click(
+    await userEvent.click(
       within(screen.getByTestId('MovieItem-76600')).getByTitle(
         'Remove from favourites'
       )

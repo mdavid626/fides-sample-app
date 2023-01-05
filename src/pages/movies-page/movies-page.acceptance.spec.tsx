@@ -48,7 +48,7 @@ describe('[Acceptance] movies-page', () => {
     renderWithRouterQueryClient(<Routes />);
     await screen.findByText('Avatar: The Way of Water');
     const movieItem = screen.getByTestId('MovieItem-76600');
-    userEvent.click(within(movieItem).getByTitle('Add to favourites'));
+    await userEvent.click(within(movieItem).getByTitle('Add to favourites'));
     await waitFor(() => {
       expect(
         within(movieItem).getByTitle('Remove from favourites')
@@ -65,7 +65,9 @@ describe('[Acceptance] movies-page', () => {
     renderWithRouterQueryClient(<Routes />);
     await screen.findByText('Avatar: The Way of Water');
     const movieItem = screen.getByTestId('MovieItem-76600');
-    userEvent.click(within(movieItem).getByTitle('Remove from favourites'));
+    await userEvent.click(
+      within(movieItem).getByTitle('Remove from favourites')
+    );
     await waitFor(() => {
       expect(within(movieItem).getByTitle('Add to favourites')).toBeVisible();
     });
